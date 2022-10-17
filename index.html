@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- meta settings -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- title -->
+        <title>Tasks Management</title>
+
+        <!-- javascript -->
+        <script src="main.js"></script>
+
+        <!-- css -->
+        <link rel="stylesheet" href="main.css">
+
+        <!-- icon -->
+        <link rel="icon" href ="https://github.com/kggold4/todo-js-app/blob/main/images/icon.png" type = "image/x-icon">
+
+    </head>
+    <!-- onload functions -->
+    <body onload="getDOMs();loadTasksARefresh();loadTasks();displayTasks();">
+
+        <!-- header -->
+        <header>
+            <h2>Tasks Management</h2>
+            <hr>
+        </header>
+
+        <!-- Adding Tasks Section -->
+        <section class="insert-tasks" id="insertasks">
+                <h2>New Task:</h2>
+                <ul>
+                    Title:
+                </ul>
+                <ul>
+                    <input type="text" class="title" id="title">
+                </ul>
+                <ul>
+                    Content:
+                </ul>
+                <ul>
+                    <textarea id="content" class="content"></textarea>
+                </ul>
+                <div class="wrapper-a">
+                    <input type="button" class="btn" value="Insert" onclick="insert();">
+                    <input type="button" class="btn" value="Cancel" onclick="hideInsertTasks();">
+                </div>
+                <div class="error">
+                    <span id="error"></span>
+                </div>
+        </section>
+
+        <!-- Tasks List Section -->
+        <section class="tasks-list">
+            <span class="tasksoutput" id="tasksoutput"></span>
+        </section>
+
+        <!-- Delete all Tasks Button -->
+        <input type="button" class="btn deletebtn" id="standart-rem" value="Delete all Tasks" onclick="clearTasks();">
+
+        <!-- Insert Task Button -->
+        <input type="button" value="+" class="insert-btn" id="insertbtn" onclick="showInsertTasks();">
+
+    </body>
+</html>
